@@ -12,7 +12,7 @@ WPFアプリ(.NET Framework4.7.2)用ひな形プロジェクト
 　・説明　ユーザに画面ではなくコマンドラインインタフェースを公開する場合に使用
 　・依存関係　Domain、Infrastructure
 
-■WPF
+■WPF or WinForm
 　・説明　画面
 　・依存関係　Domain、Infrastructure
 

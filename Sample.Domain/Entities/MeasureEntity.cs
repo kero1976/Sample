@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Sample.Domain.ValueObjects;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -13,14 +14,14 @@ namespace Sample.Domain.Entities
             DateTime measureDate,
             float measureValue)
         {
-            AreaId = areaId;
-            MeasureDate = measureDate;
+            AreaId = new AreaId(areaId);
+            MeasureDate = new MeasureDate(measureDate);
             MeasureValue = measureValue;
         }
 
-        public int AreaId { get; }
+        public AreaId AreaId { get; }
 
-        public DateTime MeasureDate { get; }
+        public MeasureDate MeasureDate { get; }
 
         public float MeasureValue { get; }
     }

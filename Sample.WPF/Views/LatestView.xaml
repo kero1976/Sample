@@ -1,0 +1,27 @@
+﻿<Window x:Class="Sample.WPF.Views.LatestView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Sample.WPF.Views"
+        mc:Ignorable="d"
+        Title="LatestView" Height="203.6" Width="336.8">
+    <Grid>
+        <StackPanel HorizontalAlignment="Left">
+            <StackPanel x:Name="SearchButton" Orientation="Horizontal" Margin="10" >
+                <Label Content="エリアID" Width="100"/>
+                <TextBox x:Name="AreaIdTextBox" Width="200" IsReadOnly="True" Text="{Binding }" />
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Margin="10" >
+                <Label Content="計測日時"  Width="100" />
+                <TextBox x:Name="MeasureDateTextBox" Width="200"  IsReadOnly="True" />
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Margin="10" >
+                <Label Content="計測値"  Width="100" />
+                <TextBox x:Name="MeasureValueTextBox" Width="200"  IsReadOnly="True"/>
+            </StackPanel>
+            <Button Content="検索" />
+        </StackPanel>
+
+    </Grid>
+</Window>
