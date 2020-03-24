@@ -20,3 +20,5 @@ WPFアプリ(.NET Framework4.7.2)用ひな形プロジェクト
 　・単体テスト用
 　・依存関係　Domain、Infrastructure、API、WPF
 
+□ライブラリ
+・log4net

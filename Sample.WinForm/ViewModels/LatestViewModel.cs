@@ -13,6 +13,10 @@ namespace Sample.WinForm.ViewModels
         private string _measureDateText = string.Empty;
         private string _measureValue = string.Empty;
 
+        private static log4net.ILog _logger =
+    log4net.LogManager.GetLogger(
+        System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
+
         public LatestViewModel():this(Factories.CreateMesure())
         {
 
@@ -55,6 +59,7 @@ namespace Sample.WinForm.ViewModels
 
         public void Search()
         {
+            _logger.Debug("検索");
             var measure = _measureRepository.GetLatest();
             AreaIdText = measure.AreaId.DisplayValue;
             MeasureDateText = measure.MeasureDate.DisplayValue;

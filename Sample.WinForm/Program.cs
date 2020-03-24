@@ -9,6 +9,10 @@ namespace Sample.WinForm
 {
     static class Program
     {
+
+        private static log4net.ILog _logger =
+            log4net.LogManager.GetLogger(
+                System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
         /// <summary>
         /// アプリケーションのメイン エントリ ポイントです。
         /// </summary>
@@ -17,6 +21,10 @@ namespace Sample.WinForm
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+
+            _logger.Debug("でばっぐ");
+            _logger.Error("えらー");
+
             Application.Run(new LatestView());
         }
     }
